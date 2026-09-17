@@ -1,0 +1,11 @@
+{
+  "name": "Remix BHU Sec-E Telemetry",
+  "description": "Academic telemetry and geofence-verified presence system for BHU Commerce Section E.",
+  "requestFramePermissions": [
+    "camera",
+    "geolocation"
+  ],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

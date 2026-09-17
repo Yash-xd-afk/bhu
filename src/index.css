@@ -1,0 +1,156 @@
+@import "tailwindcss";
+
+@theme {
+  --color-surface: #000000;
+  --color-surface-dim: #09090b;
+  --color-surface-bright: #27272a;
+  --color-surface-container-lowest: #050507;
+  --color-surface-container-low: #121214;
+  --color-surface-container: #1c1c1e;
+  --color-surface-container-high: #2c2c2e;
+  --color-surface-container-highest: #3a3a3c;
+  --color-surface-variant: #2c2c2e;
+  --color-on-surface: #ffffff;
+  --color-on-surface-variant: #8e8e93;
+  --color-primary: #ff9f0a;
+  --color-on-primary: #000000;
+  --color-primary-container: #d97706;
+  --color-on-primary-container: #ffffff;
+  --color-secondary: #0a84ff;
+  --color-on-secondary: #ffffff;
+  --color-secondary-container: #0040dd;
+  --color-on-secondary-container: #ffffff;
+  --color-tertiary: #30d158;
+  --color-on-tertiary: #000000;
+  --color-tertiary-container: #1b8a38;
+  --color-on-tertiary-container: #ffffff;
+  --color-error: #ff453a;
+  --color-on-error: #ffffff;
+  --color-error-container: #8e1c16;
+  --color-on-error-container: #ffdcd9;
+  --color-outline: #38383a;
+  --color-outline-variant: #262628;
+
+  --font-headline: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "SF Pro", "Plus Jakarta Sans", "Inter", system-ui, sans-serif;
+  --font-mono: "SF Pro Rounded", "JetBrains Mono", ui-monospace, monospace;
+  --font-body: -apple-system, BlinkMacSystemFont, "SF Pro Text", "SF Pro", "Plus Jakarta Sans", "Inter", system-ui, sans-serif;
+}
+
+@layer base {
+  html, body {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: #000000;
+    color: #ffffff;
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "SF Pro", "Plus Jakarta Sans", "Inter", system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  body {
+    overscroll-behavior-y: none;
+  }
+  .pb-safe {
+    padding-bottom: max(env(safe-area-inset-bottom, 0px), 16px);
+  }
+  .pt-safe {
+    padding-top: max(env(safe-area-inset-top, 0px), 12px);
+  }
+}
+
+/* Apple Typography Scale */
+.font-headline-xl {
+  font-size: 34px;
+  line-height: 41px;
+  letter-spacing: -0.025em;
+  font-weight: 700;
+}
+.font-headline-lg {
+  font-size: 28px;
+  line-height: 34px;
+  letter-spacing: -0.02em;
+  font-weight: 700;
+}
+.font-headline-lg-mobile {
+  font-size: 24px;
+  line-height: 30px;
+  letter-spacing: -0.015em;
+  font-weight: 600;
+}
+.font-headline-md {
+  font-size: 20px;
+  line-height: 25px;
+  letter-spacing: -0.01em;
+  font-weight: 600;
+}
+.font-headline-sm {
+  font-size: 17px;
+  line-height: 22px;
+  letter-spacing: -0.005em;
+  font-weight: 600;
+}
+.font-body-lg {
+  font-size: 17px;
+  line-height: 24px;
+  letter-spacing: -0.01em;
+  font-weight: 400;
+}
+.font-body-md {
+  font-size: 15px;
+  line-height: 20px;
+  letter-spacing: -0.005em;
+  font-weight: 400;
+}
+.font-body-sm {
+  font-size: 13px;
+  line-height: 18px;
+  letter-spacing: 0em;
+  font-weight: 400;
+}
+.font-label-lg {
+  font-size: 14px;
+  line-height: 18px;
+  letter-spacing: -0.005em;
+  font-weight: 600;
+}
+.font-label-md {
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 0.01em;
+  font-weight: 600;
+}
+.font-label-sm {
+  font-size: 11px;
+  line-height: 14px;
+  letter-spacing: 0.02em;
+  font-weight: 600;
+}
+
+/* Apple iOS Glass & Depth styles */
+.ios-blur {
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+}
+
+.ios-card {
+  background-color: #1c1c1e;
+  border-radius: 1.25rem;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.4);
+}
+
+.ios-pill {
+  border-radius: 9999px;
+}
+
+.ios-press {
+  transition: transform 0.15s cubic-bezier(0.2, 0.8, 0.2, 1), opacity 0.15s ease;
+}
+.ios-press:active {
+  transform: scale(0.97);
+  opacity: 0.85;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
